@@ -1,0 +1,208 @@
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* CSS REST END */
+
+body {
+  height: 100vh;
+  min-width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins;
+  background-color: #fafafa;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.text {
+  margin-bottom: 120px;
+  text-align: center;
+  display: in;
+}
+
+.text h1 {
+  font-weight: 150;
+  font-size: 30px;
+}
+
+.text h2 {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.text p {
+  font-weight: 200;
+  font-size: 15px;
+}
+
+.cards {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.double {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0px 7px 10px 0.1px #747474;
+  width: 400px;
+  height: 250px;
+  padding: 30px;
+  border-radius: 5px;
+  border-top: 5px solid black;
+  position: relative;
+}
+
+.first {
+  border-top: 5px solid var(--Cyan);
+}
+
+.card p {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+img {
+  position: absolute;
+  bottom: 30px;
+  right: 38px;
+}
+
+.second {
+  border-top-color: var(--Red);
+}
+
+.third {
+  border-top-color: var(--Orange);
+}
+
+.fourth {
+  border-top-color: var(--Blue);
+}
+
+@media (max-width: 1000px) {
+  body {
+    min-height: auto;
+    min-width: auto;
+    padding: 20px;
+    gap: 60px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .double {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .text {
+    margin-bottom: 0;
+    padding: 0 10px;
+  }
+
+  .text h1,
+  .text h2 {
+    font-size: 22px;
+  }
+
+  .text p {
+    font-size: 14px;
+  }
+}
